@@ -104,7 +104,7 @@ const UseCasesSection = ({ children }: UseCasesSectionProps) => {
       </div>
 
       {/* mobile */}
-      <div className="md:hidden flex flex-col gap-y-[32px]">
+      <div className="md:hidden flex flex-col gap-y-[16px]">
         {children.map((child, index) => (
           <div key={index} className="relative pb-[20px]">
             {/* Individual background per item */}
