@@ -4,6 +4,7 @@ import React from "react";
 
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import NoJsContent from "@/components/NoJsContent";
 
 import "./globals.css";
 
@@ -93,15 +94,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-    { false &&
-        <style
-          dangerouslySetInnerHTML={{
-            __html: `
+        {false && (
+          <style
+            dangerouslySetInnerHTML={{
+              __html: `
           body { display: none; }
           `,
-          }}
-        />
-    }
+            }}
+          />
+        )}
 
         {criticalFonts.map((font) => (
           <link
@@ -113,52 +114,39 @@ export default function RootLayout({
             crossOrigin="anonymous"
           />
         ))}
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+        .js-content { display: none; }
+        .js-loaded .js-content { display: block; }
+        .js-loaded .nojs-content { display: none; }
+      `,
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+        document.documentElement.classList.add('js-loaded');
+      `,
+          }}
+        />
       </head>
 
       <body>
-    { false &&
-        <Script strategy="beforeInteractive">
-          {`document.body.style.display = 'block';`}
-        </Script>
-    }
+        {false && (
+          <Script strategy="beforeInteractive">
+            {`document.body.style.display = 'block';`}
+          </Script>
+        )}
+        <NoJsContent />
 
-        <noscript>
-          {/* Global fallback content for the entire application */}
-          <div>
-            <p className="mb-2">Reach us at: founders@opfn.co</p>
-            <ul>
-              <li>
-                <a href="https://twitter.com/opfnco" target="_blank">
-                  Twitter
-                </a>
-              </li>
-              <li>
-                <a href="https://docs.opfn.co" target="_blank">
-                  Documentation
-                </a>
-              </li>
-              <li>
-                <a href="https://blog.vaporware.network" target="_blank">
-                  Blog/Podcast
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/deathtothecorporation/pallas"
-                  target="_blank"
-                >
-                  GitHub
-                </a>
-              </li>
-            </ul>
-          </div>
-        </noscript>
-
-        <header className="z-30 mx-auto sticky top-0 flex w-full justify-between">
-          <Nav></Nav>
-        </header>
-        {children}
-        <Footer></Footer>
+        <div className="js-content">
+          <header className="z-30 mx-auto sticky top-0 flex w-full justify-between">
+            <Nav></Nav>
+          </header>
+          {children}
+          <Footer></Footer>
+        </div>
       </body>
 
       <Script id="matomo-analytics">
