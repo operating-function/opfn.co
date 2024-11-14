@@ -329,9 +329,9 @@ export default function Home() {
                     </h2>
                   </header>
 
-                  <main className="content-zone md:px-0">
+                  <main className="">
                     <div className="py-2 bg-[#EEE] opacity-90">
-                      <div className="mb-[17px] h-[333px]">
+                      <div className="w-[333px] h-[333px]">
                         <pre className="code core-tech-code">
                           <code
                             className="flex flex-col px-4 gap-y-4"
@@ -442,9 +442,9 @@ EXEC(e, x)       = x`}
                     </h2>
                   </header>
 
-                  <div className="content-zone md:px-0">
+                  <div className="">
                     <main className="bg-[#EEE] pt-2 opacity-90">
-                      <div className="mb-[16px] px-4 core-tech-code">
+                      <div className="w-[333px] h-[333px] core-tech-code">
                         <div>
                           <p>
                             Cogs are programs that run forever. Even if you
