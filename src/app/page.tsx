@@ -81,16 +81,16 @@ const UseCasesSection = ({ children }: UseCasesSectionProps) => {
   return (
     <div className="flex w-full md:px-0 lg:content-zone mx-auto flex-col justify-items-stretch">
       {/* desktop */}
-      <div className="hidden md:flex md:flex-col w-full container mx-auto max-w-opfn md:gap-y-[12px]">
+      <div className="hidden md:flex md:flex-col w-full container mx-auto max-w-opfn md:gap-y-[19px]">
         {pairs.map((pair, pairIndex) => (
-          <div key={pairIndex} className="relative">
+          <div key={pairIndex} className="relative pb-4">
             {/* Shared background for the pair */}
-            <div className="absolute inset-0">
+            <div className="inset-0">
               <div className="jungle-bg">
                 <img
                   src="/images/dithered-jungle.png"
                   alt="background"
-                  className="mt-[12px] w-full object-cover opacity-15 grayscale"
+                  className="mt-[30px] w-full object-cover opacity-10 grayscale"
                 />
                 <div className="use-case-gradient"></div>
               </div>
@@ -106,14 +106,14 @@ const UseCasesSection = ({ children }: UseCasesSectionProps) => {
       {/* mobile */}
       <div className="md:hidden flex flex-col gap-y-[32px]">
         {children.map((child, index) => (
-          <div key={index} className="relative">
+          <div key={index} className="relative pb-[20px]">
             {/* Individual background per item */}
             <div className="absolute inset-0">
               <div className="jungle-bg">
                 <img
                   src="/images/dithered-jungle.png"
                   alt="background"
-                  className="mt-[12px] w-full object-cover opacity-15 grayscale"
+                  className="mt-[30px] w-full object-cover opacity-15 grayscale"
                 />
                 <div className="use-case-gradient"></div>
               </div>
@@ -827,7 +827,7 @@ Nats - natural numbers: opaque data or opcodes`}
                     hasBackground={false}
                   >
                     <div
-                      className={`w-full pl-4 pr-4 ${index % 2 !== 0 ? "md:pr-4 md:pl-0" : "md:pl-4 md:pr-0"}`}
+                      className={`w-full pl-4 pr-4 ${index % 2 !== 0 ? "md:pr-0 md:pl-0" : "md:pl-0 md:pr-0"}`}
                     >
                       <p className="w-full mb-0">{caseItem.content}</p>
                     </div>
@@ -835,7 +835,7 @@ Nats - natural numbers: opaque data or opcodes`}
                 ))}
               </UseCasesSection>
 
-              <div className="flex mt-opfn mb-opfn-sm justify-center">
+              <div className="flex mt-opfn-sm mb-opfn-sm justify-center">
                 <Link href="mailto:founders@opfn.co">
                   <button>Contact Us</button>
                 </Link>

@@ -19,7 +19,7 @@ export default function CaseArticle({
 }: CaseArticleProps) {
   return (
     <article className={className}>
-      <header className="">
+      <header className="pl-4 md:pl-0">
         <div className="number">{number}</div>
         <div className="title">
           <div className="header-line"></div>
