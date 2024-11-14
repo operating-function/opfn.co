@@ -5,10 +5,10 @@ export default function About() {
     <div>
       <main
         id="vision"
-        className="mt-24 content-zone mx-auto px-4 mb-12"
+        className="content-zone mx-auto pt-12 px-4 mb-12"
       >
         <div>
-          <h2 className="my-8">What motivates us</h2>
+          <h2 className="pt-12 my-8">What motivates us</h2>
           <p>
             Software is the best tool we have to solve societal issues
             at scale, so why does modern software seem to cause so much
