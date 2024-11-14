@@ -48,7 +48,8 @@ export const metadata: Metadata = {
     creator: "@opfnco",
     title: "The Operating Function Company",
     description,
-    images: `https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/website-assets/images/twitter-image.jpeg?v=${timestamp}`,
+    images: `https://opfn.co/twitter-image.jpeg`,
+
     // images: ["https://vaporware.network/images/vaporware-devices-30s-preview.jpeg"],
     // "card": "player",
     // "players": {
@@ -64,7 +65,7 @@ export const metadata: Metadata = {
     description,
     url: "https://opfn.co",
     siteName: "opfn.co",
-    images: `https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/website-assets/images/twitter-image.jpeg?v=${timestamp}`,
+    images: `https://opfn.co/opengraph-image.jpeg`,
     // images: ["https://vaporware.network/images/vaporware-devices-30s-preview.jpeg"],
     // images: [
     //   {
