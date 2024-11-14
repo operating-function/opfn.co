@@ -141,18 +141,17 @@ export default function Home() {
   return (
     <div className="mb-10">
       <main className="">
-        <section className="top-hero relative z-10 overflow-hidden flex justify-center text-white text-center flex-col items-center align-center mb-0 md:w-opfn w-full mx-auto h-[439px] md:h-[591px] lg:h-[800px]">
+        <section className="top-hero relative z-10 overflow-hidden flex justify-center text-white text-center flex-col items-center align-center mb-0 md:max-w-opfn w-full mx-auto h-[439px] md:h-[591px] lg:h-[800px]">
           <BlurImage
             highQualitySrc="/images/hero-forest-large.png"
             lowQualitySrc="/images/hero-forest-small.png"
             alt="Forest Background"
             fill
             className="absolute inset-0 w-full h-full object-cover scale-[1.1] md:scale-[1.05]"
-            sizes="(max-width: 810px) 100vw, (max-width: 1728px) 1200px, 1800px"
           />
 
-          <div className="relative z-10 mx-auto pt-[120px] md:pt-0 md:px-[52px]">
-            <h1 className="md:w-[744px]">
+          <div className="relative z-10 mx-auto pt-[120px] md:pt-0">
+            <h1 className="md:w-[744px] md:px-[56px]">
               <Lockup className="mx-auto" size={200} color="white" />
             </h1>
             <h2 className="no-underline font-bold berkeley text-opmd md:text-oplg mb-[60px] md:mb-[44px] lg:mb-[81px]">
