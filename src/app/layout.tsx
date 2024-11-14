@@ -93,6 +93,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+    { false &&
         <style
           dangerouslySetInnerHTML={{
             __html: `
@@ -100,6 +101,7 @@ export default function RootLayout({
           `,
           }}
         />
+    }
 
         {criticalFonts.map((font) => (
           <link
@@ -114,9 +116,11 @@ export default function RootLayout({
       </head>
 
       <body>
+    { false &&
         <Script strategy="beforeInteractive">
           {`document.body.style.display = 'block';`}
         </Script>
+    }
 
         <noscript>
           {/* Global fallback content for the entire application */}
