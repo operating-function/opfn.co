@@ -34,11 +34,12 @@ export const viewport = {
   //userScalable: "no",
 };
 
+const timestamp = Date.now();
+
 export const metadata: Metadata = {
   metadataBase,
   title: "The Operating Function Company",
   description,
-  // "image": "https://vaporware-network-git-relaunch-2024-vaporware.vercel.app/images/vaporware-devices-preview.png",
   category: "technology",
 
   twitter: {
@@ -47,8 +48,7 @@ export const metadata: Metadata = {
     creator: "@opfnco",
     title: "The Operating Function Company",
     description,
-    images:
-      "https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/website-assets/images/twitter-image.jpeg",
+    images: `https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/website-assets/images/twitter-image.jpeg?v=${timestamp}`,
     // images: ["https://vaporware.network/images/vaporware-devices-30s-preview.jpeg"],
     // "card": "player",
     // "players": {
@@ -64,8 +64,7 @@ export const metadata: Metadata = {
     description,
     url: "https://opfn.co",
     siteName: "opfn.co",
-    images:
-      "https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/website-assets/images/opengraph-image.jpeg",
+    images: `https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/website-assets/images/twitter-image.jpeg?v=${timestamp}`,
     // images: ["https://vaporware.network/images/vaporware-devices-30s-preview.jpeg"],
     // images: [
     //   {
@@ -134,10 +133,7 @@ export default function RootLayout({
                 </a>
               </li>
               <li>
-                <a
-                  href="https://blog.vaporware.network"
-                  target="_blank"
-                >
+                <a href="https://blog.vaporware.network" target="_blank">
                   Blog/Podcast
                 </a>
               </li>
