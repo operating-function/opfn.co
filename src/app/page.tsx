@@ -547,96 +547,118 @@ type CogClosure =
             <div className="border-b border-black w-[318px] mx-auto md:w-opfn-narrow mx-10 md:mx-auto md:narrow-zone"></div>
           </div>
 
-          <section className="system-components md:grid md:grid-cols-2 md:gap-x-[96px] items-start flex flex-col content-zone">
+          <section className="system-components flex flex-col content-zone">
+
+            <div className="hidden md:block"> {/* desktop */}
+            <div className="components-row md:grid md:grid-cols-2 md:gap-x-[96px] mb-[8px]">
+              <article className="grow">
+                <header className="mb-2">
+                  <h2 className="mb-0">PLAN</h2>
+                </header>
+                <p className="mb-0">
+                  PLAN is the foundation of our system software—the operating
+                  function bootstraps from PLAN. It is a functional, lazy, and
+                  reflective “bytecode” and is designed to strike a reasonable
+                  balance between several requirements: human readability,
+                  functional compile target, efficient and stable memory
+                  representation, ease of implementation, and extensibility and
+                  modifiability.
+                </p>
+              </article>
+
+              <article className="grow">
+                <header className="mb-2">
+                  <h2 className="text-right w-full">Machines</h2>
+                </header>
+                <div className="flex h-full flex-col justify-between">
+                  <div className="mb-0">
+                    <p className="mb-0">
+                      Operating functions run on a virtual machine. The semantics
+                      of the machine are completely encoded within the system—like
+                      a runnable spec—which makes it tractable to implement and
+                      audit multiple competing versions. Each user device runs one
+                      machine; together they form a networked computer.
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div className="components-row md:grid md:grid-cols-2 md:gap-x-[96px]">
+              <article className="grow pl-[24px]">
+                <div className="">
+                  <pre className="code">
+                    <code
+                      className="text-[11px]"
+                      style={{
+                        whiteSpace: "pre-wrap",
+                        wordWrap: "break-word",
+                      }}
+                    >
+                      {`PLAN ::= <PLAN>
+         | {Nat Nat PLAN}
+         | (PLAN PLAN)
+         | Nat
+
+  Pins - subheaps: content addressed DAG nodes
+  Laws - supercombinators: pure n-ary functions
+  Apps - applications: closures or thunks
+  Nats - natural numbers: opaque data or opcodes`}
+                    </code>
+                  </pre>
+                </div>
+              </article>
+
+              <article className="w-full flex flex-row justify-end">
+                <img src="/images/rocket.png" className="w-2/3" />
+              </article>
+            </div>
+
+    { false &&
+    <>
             <article className="left mb-opfn-sm md:mb-0 md:mb-[85px]">
-              <header className="mb-2 mt-0">
-                <h2 className="mb-0">PLAN</h2>
-              </header>
-              <p className="mb-[16px]">
-                PLAN is the foundation of our system software—the operating
-                function bootstraps from PLAN. It is a functional, lazy, and
-                reflective “bytecode” and is designed to strike a reasonable
-                balance between several requirements: human readability,
-                functional compile target, efficient and stable memory
-                representation, ease of implementation, and extensibility and
-                modifiability.
-              </p>
-
-              <div className="w-full flex items-center justify-around">
-                <pre className="code">
-                  <code
-                    className="text-opsm"
-                    style={{
-                      whiteSpace: "pre-wrap",
-                      wordWrap: "break-word",
-                    }}
-                  >
-                    {`PLAN ::= <PLAN>
-       | {Nat Nat PLAN}
-       | (PLAN PLAN)
-       | Nat
-
-Pins - subheaps: content addressed DAG nodes
-Laws - supercombinators: pure n-ary functions
-Apps - applications: closures or thunks
-Nats - natural numbers: opaque data or opcodes`}
-                  </code>
-                </pre>
-              </div>
             </article>
 
             <article className="right mb-opfn-sm md:mb-0 md:mb-[85px]">
-              <header className="mb-2 mt-0">
-                <h2 className="text-right w-full">Machines</h2>
-              </header>
-              <div className="flex h-full flex-col justify-between">
-                <div className="mb-0">
-                  <p className="mb-0">
-                    Operating functions run on a virtual machine. The semantics
-                    of the machine are completely encoded within the system—like
-                    a runnable spec—which makes it tractable to implement and
-                    audit multiple competing versions. Each user device runs one
-                    machine; together they form a networked computer.
-                  </p>
-                </div>
-                <div className="shrink mt-[24px]"></div>
-                <div className="relative self-center h-[120px]">
-                  <img height="120" src="/images/rocket.png" />
-                </div>
-              </div>
             </article>
+          </>
+    }
+            <div className="components-row md:grid md:grid-cols-2 md:gap-x-[96px] md:mt-[69px] mb-[52px]">
+              <article className="grow">
+                <header className="mb-2 mt-0">
+                  <h2>Cogs</h2>
+                </header>
+                <p className="mb-0">
+                  Machines run cogs. Cogs are responsible for user programs and
+                  managing the persistence of data. They do this automatically.
+                  Within the system, cogs are closures which capture their full
+                  environment. Cogs can upgrade themselves while running by
+                  accepting a value which defines a new cog.
+                </p>
+              </article>
 
-            <article className="left mb-opfn-sm md:mb-0">
-              <header className="mb-2 mt-0">
-                <h2>Cogs</h2>
-              </header>
-              <p>
-                Machines run cogs. Cogs are responsible for user programs and
-                managing the persistence of data. They do this automatically.
-                Within the system, cogs are closures which capture their full
-                environment. Cogs can upgrade themselves while running by
-                accepting a value which defines a new cog.
-              </p>
-              <div className="flex justify-center">
-                <img src="/images/blob.png" />
-              </div>
-            </article>
-
-            <article className="right mb-0">
-              <div className="mb-opfn-sm">
+              <article className="grow">
                 <header className="mb-2 mt-0">
                   <h2 className="text-right w-full">Drivers</h2>
                 </header>
-                <p>
+                <p className="mb-0">
                   Drivers are a special program that only a cog can create. Each
                   cog can create and manage many drivers. Drivers interact with
                   a small set of standardized virtual hardware devices and let
                   an operating function connect to things like the web, a file
                   system, or a GPU.
                 </p>
-              </div>
+              </article>
+            </div>
 
-              <div className="mb-0">
+            <div className="components-row md:grid md:grid-cols-2 md:gap-x-[96px] mb-[62px]">
+              <article className="grow">
+                <div className="flex justify-center">
+                  <img src="/images/blob.png" />
+                </div>
+              </article>
+
+              <article className="grow">
                 <header className="mb-2 mt-0">
                   <h2 className="md:text-right w-full">Manifests</h2>
                 </header>
@@ -646,10 +668,121 @@ Nats - natural numbers: opaque data or opcodes`}
                   a user’s existing network of operating functions it is
                   responsible for: both programs and data.
                 </p>
-              </div>
-            </article>
+              </article>
+            </div>
 
-            <div className="col-span-2 mx-auto mt-opfn-sm">
+          </div> {/* end of desktop */}
+
+          <div className="md:hidden block"> {/* mobile */}
+            <div className="flex flex-col">
+              <article className="grow">
+                <header className="mb-2">
+                  <h2 className="mb-0">PLAN</h2>
+                </header>
+                <p className="mb-0">
+                  PLAN is the foundation of our system software—the operating
+                  function bootstraps from PLAN. It is a functional, lazy, and
+                  reflective “bytecode” and is designed to strike a reasonable
+                  balance between several requirements: human readability,
+                  functional compile target, efficient and stable memory
+                  representation, ease of implementation, and extensibility and
+                  modifiability.
+                </p>
+              </article>
+
+              <article className="grow mt-[24px] pl-[24px]">
+                <div className="">
+                  <pre className="code">
+                    <code
+                      className="text-[11px]"
+                      style={{
+                        whiteSpace: "pre-wrap",
+                        wordWrap: "break-word",
+                      }}
+                    >
+                      {`PLAN ::= <PLAN>
+         | {Nat Nat PLAN}
+         | (PLAN PLAN)
+         | Nat
+
+  Pins - subheaps: content addressed DAG nodes
+  Laws - supercombinators: pure n-ary functions
+  Apps - applications: closures or thunks
+  Nats - natural numbers: opaque data or opcodes`}
+                    </code>
+                  </pre>
+                </div>
+              </article>
+
+
+              <article className="grow mt-[35px]">
+                <header className="mb-2">
+                  <h2 className="text-right w-full">Machines</h2>
+                </header>
+                <div className="flex h-full flex-col justify-between">
+                  <div className="mb-0">
+                    <p className="mb-0">
+                      Operating functions run on a virtual machine. The semantics
+                      of the machine are completely encoded within the system—like
+                      a runnable spec—which makes it tractable to implement and
+                      audit multiple competing versions. Each user device runs one
+                      machine; together they form a networked computer.
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <article className="w-full flex flex-row justify-center mt-[24px]">
+                <img src="/images/rocket.png" className="w-2/3" />
+              </article>
+
+              <article className="grow mt-[24px]">
+                <header className="mb-2 mt-0">
+                  <h2>Cogs</h2>
+                </header>
+                <p className="mb-0">
+                  Machines run cogs. Cogs are responsible for user programs and
+                  managing the persistence of data. They do this automatically.
+                  Within the system, cogs are closures which capture their full
+                  environment. Cogs can upgrade themselves while running by
+                  accepting a value which defines a new cog.
+                </p>
+              </article>
+
+              <article className="grow mt-[24px]">
+                <div className="flex justify-center">
+                  <img src="/images/blob.png" />
+                </div>
+              </article>
+
+              <article className="grow">
+                <header className="mb-2 mt-0">
+                  <h2 className="text-right w-full">Drivers</h2>
+                </header>
+                <p className="mb-0">
+                  Drivers are a special program that only a cog can create. Each
+                  cog can create and manage many drivers. Drivers interact with
+                  a small set of standardized virtual hardware devices and let
+                  an operating function connect to things like the web, a file
+                  system, or a GPU.
+                </p>
+              </article>
+
+              <article className="grow mt-[36px] mb-[36px]">
+                <header className="mb-2 mt-0">
+                  <h2 className="md:text-right w-full">Manifests</h2>
+                </header>
+                <p className="md:mb-0">
+                  Manifests are a special PLAN value that must be provided to a
+                  new machine. The manifest tells the machine what contents from
+                  a user’s existing network of operating functions it is
+                  responsible for: both programs and data.
+                </p>
+              </article>
+            </div>
+          </div> {/* end of mobile */}
+
+            <div className="col-span-2 mx-auto">
               <a href="https://docs.opfn.co" target="_blank">
                 <button>Read the Docs</button>
               </a>
