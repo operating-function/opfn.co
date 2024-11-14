@@ -595,15 +595,15 @@ type CogClosure =
                         wordWrap: "break-word",
                       }}
                     >
-                      {`PLAN ::= <PLAN>
-         | {Nat Nat PLAN}
-         | (PLAN PLAN)
-         | Nat
+{`PLAN ::= <PLAN>
+       | {Nat Nat PLAN}
+       | (PLAN PLAN)
+       | Nat
 
-  Pins - subheaps: content addressed DAG nodes
-  Laws - supercombinators: pure n-ary functions
-  Apps - applications: closures or thunks
-  Nats - natural numbers: opaque data or opcodes`}
+Pins - subheaps: content addressed DAG nodes
+Laws - supercombinators: pure n-ary functions
+Apps - applications: closures or thunks
+Nats - natural numbers: opaque data or opcodes`}
                     </code>
                   </pre>
                 </div>
@@ -700,15 +700,15 @@ type CogClosure =
                         wordWrap: "break-word",
                       }}
                     >
-                      {`PLAN ::= <PLAN>
-         | {Nat Nat PLAN}
-         | (PLAN PLAN)
-         | Nat
+{`PLAN ::= <PLAN>
+       | {Nat Nat PLAN}
+       | (PLAN PLAN)
+       | Nat
 
-  Pins - subheaps: content addressed DAG nodes
-  Laws - supercombinators: pure n-ary functions
-  Apps - applications: closures or thunks
-  Nats - natural numbers: opaque data or opcodes`}
+Pins - subheaps: content addressed DAG nodes
+Laws - supercombinators: pure n-ary functions
+Apps - applications: closures or thunks
+Nats - natural numbers: opaque data or opcodes`}
                     </code>
                   </pre>
                 </div>
