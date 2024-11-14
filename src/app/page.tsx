@@ -614,15 +614,6 @@ Nats - natural numbers: opaque data or opcodes`}
               </article>
             </div>
 
-    { false &&
-    <>
-            <article className="left mb-opfn-sm md:mb-0 md:mb-[85px]">
-            </article>
-
-            <article className="right mb-opfn-sm md:mb-0 md:mb-[85px]">
-            </article>
-          </>
-    }
             <div className="components-row md:grid md:grid-cols-2 md:gap-x-[96px] md:mt-[69px] mb-[52px]">
               <article className="grow">
                 <header className="mb-2 mt-0">
@@ -733,7 +724,7 @@ Nats - natural numbers: opaque data or opcodes`}
               </article>
 
               <article className="w-full flex flex-row justify-center mt-[24px]">
-                <img src="/images/rocket.png" className="w-2/3" />
+                <img src="/images/rocket.png" className="w-[268px]" />
               </article>
 
               <article className="grow mt-[24px]">
