@@ -275,7 +275,6 @@ h5 {
   @apply max-w-opfn-narrow;
   @apply z-10;
   @apply mt-0;
-  @apply mb-opfn-sm;
   @apply overflow-hidden;
   @apply flex;
   @apply justify-center;
@@ -287,6 +286,8 @@ h5 {
   @apply w-full;
   @apply h-[40vw];
   @apply md:h-[396px];
+  @apply mb-6;
+  @apply md:mb-0;
 }
 
 header.section-header h1 {
@@ -464,9 +465,6 @@ section#core-technology h2 {
   background: var(--bgColor);
 }
 
-#core-technology main {
-}
-
 .jungle-gradient {
   background: linear-gradient(
     to bottom,
@@ -482,7 +480,8 @@ section#core-technology h2 {
 }
 
 .core-tech-code {
-  @apply h-[321px];
+  @apply bg-[#EEE];
+  /*@apply h-[321px];*/
 }
 .gradient-height {
   @apply h-[400px];
