@@ -286,6 +286,8 @@ h5 {
   @apply w-full;
   @apply h-[40vw];
   @apply md:h-[396px];
+  @apply mb-6;
+  @apply md:mb-0;
 }
 
 header.section-header h1 {
