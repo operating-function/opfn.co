@@ -178,7 +178,7 @@ export default function NoJsContent() {
               Programs Run Forever
             </dt>
             <dd>
-              Operating functions provides strong backward and forward
+              Operating functions provide strong backward and forward
               compatibility guarantees and make it possible to move running
               computations between machines, with no impact to the program.
             </dd>
