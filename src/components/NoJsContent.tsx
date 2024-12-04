@@ -558,7 +558,7 @@ type CogClosure =
         <section>
           <h2 className="my-4">Contact</h2>
           <p>
-            <a href="mailto:founders@opfn.co">founders@opfn.co</a>
+            <a href="mailto:chase@opfn.co">chase@opfn.co</a>
           </p>
           <p>
             <a href="https://docs.opfn.co">Documentation</a>

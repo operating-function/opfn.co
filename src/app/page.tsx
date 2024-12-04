@@ -827,7 +827,7 @@ Nats - natural numbers: opaque data or opcodes`}
               </UseCasesSection>
 
               <div className="flex mt-opfn-sm mb-opfn-sm justify-center">
-                <Link href="mailto:founders@opfn.co">
+                <Link href="mailto:chase@opfn.co">
                   <button>Contact Us</button>
                 </Link>
               </div>
