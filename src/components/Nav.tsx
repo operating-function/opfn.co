@@ -69,8 +69,15 @@ export default function Nav() {
           <Logo size={30} color="black" />
         </Link>
         <Hamburger color={elementColor}>
-          <nav id="site-nav" className="space-y-4">
-            <div className="text-right pr-3 pt-3">
+          <nav id="site-nav" className="p-4">
+            <div className="flex justify-between items-center mb-4">
+              <Link
+                href="/"
+                aria-label="home"
+                className="block text-lg hover:text-gray-600 text-center"
+              >
+                <Logo size={50} color="black" className="" />
+              </Link>
               <Link href="">
                 <button
                   className="relative w-[32px] h-[32px] bg-[#EEE]"
@@ -85,37 +92,39 @@ export default function Nav() {
                 </button>
               </Link>
             </div>
+            <div className="flex flex-col gap-1 mb-6">
+              <Link
+                href="/"
+                className="block text-lg hover:text-gray-600"
+              >
+                Home
+              </Link>
+              <Link
+                href="/about"
+                className="block text-lg hover:text-gray-600"
+              >
+                About
+              </Link>
+              <Link
+                href="/careers"
+                className="block text-lg hover:text-gray-600"
+              >
+                Careers
+              </Link>
+            </div>
+            
+            <h2 className="border-b-4 border-black border-double mb-2">Experiments</h2>
             <Link
-              href="/"
-              className="block text-lg hover:text-gray-600 text-center"
+              href="/pallas"
+              className="block text-lg hover:text-gray-600"
             >
-              <Logo size={50} color="black" className="mx-auto" />
+              Pallas — Software defined computing
             </Link>
-            <ExternalLink
-              href="https://github.com/operating-function/pallas/issues?q=is%3Aissue+is%3Aopen+label%3Acontributor_challenge"
-              divClass="text-lg hover:text-gray-600 justify-center flex"
-              linkClass="justify-center text-center"
-            >
-              Contribute
-            </ExternalLink>
-            <ExternalLink
-              href="https://github.com/operating-function/pallas"
-              divClass="text-lg hover:text-gray-600 justify-center flex"
-              linkClass="justify-center text-center"
-            >
-              Code
-            </ExternalLink>
             <Link
-              href="/about"
-              className="block text-lg hover:text-gray-600 text-center"
+              href="/packrat"
+              className="block text-lg hover:text-gray-600"
             >
-              About
-            </Link>
-            <Link
-              href="/careers"
-              className="block text-lg hover:text-gray-600 text-center"
-            >
-              Careers
+              Packrat — Next generation browser history
             </Link>
           </nav>
         </Hamburger>
