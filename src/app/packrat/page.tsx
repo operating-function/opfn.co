@@ -81,6 +81,9 @@ export default function About() {
             </p>
           </details>
         </section>
+        <div className="content-zone my-opfn flex flex-row space-between items-center">
+          <hr className="horizontal-bars" />
+        </div>
         <section>
           <h2 className="text-center mb-6">Why we built Packrat</h2>
           <div className="flex justify-center w-full">
