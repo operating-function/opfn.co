@@ -124,7 +124,7 @@ export default function Nav() {
               href="/packrat"
               className="block text-lg hover:text-gray-600"
             >
-              Packrat — Next generation browser history
+              Packrat — Next-generation browser history
             </Link>
           </nav>
         </Hamburger>
