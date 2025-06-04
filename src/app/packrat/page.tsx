@@ -85,9 +85,9 @@ export default function About() {
           <hr className="horizontal-bars" />
         </div>
         <section>
-          <h2 className="text-center mb-6">Why we built Packrat</h2>
           <div className="flex justify-center w-full">
             <article className="max-w-[90ch] prose">
+              <h2 className="mb-6">Why we built Packrat</h2>
               <p>
                 We believe that browser history is one of the most
                 un-iterated-upon features shipped in browsers today. In recent
@@ -160,6 +160,11 @@ export default function About() {
                 other Webtorrent instances — having this enabled in libtorrent
                 by default <em>would</em> enable other interesting decentralized
                 web archive hosting projects.
+              </p>
+              <hr />
+              <p>
+                We hope that you find Packrat useful, either as a case study or
+                as a tool!
               </p>
             </article>
           </div>
