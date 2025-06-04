@@ -87,7 +87,7 @@ export default function About() {
         <section>
           <h2 className="text-center mb-6">Why we built Packrat</h2>
           <div className="flex justify-center w-full">
-            <article className="max-w-[90ch]">
+            <article className="max-w-[90ch] prose">
               <p>
                 We believe that browser history is one of the most
                 un-iterated-upon features shipped in browsers today. In recent
@@ -142,7 +142,25 @@ export default function About() {
                 if they are sufficiently motivated to do so, ultimately we are
                 restricted by the browser environment.
               </p>
-              {/* <p>Webtorrent is close to a perfect solution for us, </p> */}
+              <p>
+                Webtorrent is close to a perfect solution for hosting
+                decentralized web archives, but it still isn't supported in most
+                major torrent clients as of publishing. Unlike most other
+                standard torrent clients, Webtorrent uses WebRTC to communicate
+                between peers.{" "}
+                <a href="https://github.com/arvidn/libtorrent/pull/4123">
+                  While WebRTC support was added to libtorrent
+                </a>{" "}
+                (a common C++ library used by many torrent clients) in 2020, as
+                of publishing it is hidden behind a compiler flag and no release
+                of libtorrent has shipped with it enabled by default. In
+                practice, most clients follow the defaults of libtorrent and
+                therefore don't support seeding to Webtorrent peers. While this
+                doesn't pose a direct problem for Packrat — our users' peers are
+                other Webtorrent instances — having this enabled in libtorrent
+                by default <em>would</em> enable other interesting decentralized
+                web archive hosting projects.
+              </p>
             </article>
           </div>
         </section>
