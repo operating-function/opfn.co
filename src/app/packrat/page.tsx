@@ -80,6 +80,94 @@ export default function About() {
               compatible with other tools.
             </p>
           </details>
+          <details>
+            <summary>What analytics information do you collect?</summary>
+            <div className="prose max-w-none">
+              <p>
+                If analytics are enabled we collect the following anonymized
+                data:
+              </p>
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Tracking Identifier</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">ViewPage</th>
+                    <td>
+                      Triggers when a user clicks to view an archived page.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">TorrentCreated</th>
+                    <td>
+                      Triggers when a torrent is created for sharing archived
+                      content. Tracks how many pages are included.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">PageArchived</th>
+                    <td>Triggers when a page is successfully archived.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">PageSize</th>
+                    <td>
+                      Logs the size of the archived page if available, rounded
+                      to the nearest kilobyte.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">CookiesEnabled</th>
+                    <td>Tracks if cookie archiving is enabled.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">LocalstorageEnabled</th>
+                    <td>Tracks if local storage archiving is enabled.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">ScreenshotsEnabled</th>
+                    <td>
+                      Tracks if thumbnail screenshot archiving is enabled.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">AnalyticsEnabled</th>
+                    <td>Tracks if analytics tracking is enabled.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">SkippedDomains</th>
+                    <td>
+                      Logs the number of domains added to the skip list when
+                      changed.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">TotalSize</th>
+                    <td>
+                      Tracks the total size of all archived content, rounded to
+                      megabytes.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Started</th>
+                    <td>
+                      Triggered when the archiving process begins for a page.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Stopped</th>
+                    <td>
+                      Triggered when the archiving process is stopped, either
+                      manually or for another reason.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
         </section>
         <div className="content-zone my-opfn flex flex-row space-between items-center">
           <hr className="horizontal-bars" />
@@ -157,9 +245,9 @@ export default function About() {
                 practice, most clients follow the defaults of libtorrent and
                 therefore don't support seeding to Webtorrent peers. While this
                 doesn't pose a direct problem for Packrat — our users' peers are
-                other Webtorrent instances — having this enabled in libtorrent
-                by default <em>would</em> enable other interesting decentralized
-                web archive hosting projects.
+                always other Packrat instances using Webtorrent — having this
+                enabled in libtorrent by default <em>would</em> enable other
+                interesting decentralized web archive hosting projects.
               </p>
               <hr />
               <p>
