@@ -7,14 +7,14 @@ export default function About() {
         <section className="mb-24 min-h-[70vh] flex gap-8 md:flex-row content-stretch flex-col">
           <div className="w-full">
             <div className="sticky top-24">
-              <h1>
-                <img
-                  alt="Packrat by OPFN"
-                  src="/images/packrat/packrat-lockup-color.svg"
-                />
-              </h1>
-              <h2>Next-generation browser history from OPFN</h2>
-              <a href="#">Download for Chrome</a>
+              <img
+                alt="Packrat by OPFN"
+                src="/images/packrat/packrat-lockup-color.svg"
+              />
+              <h2 className="">Next-generation browser history from OPFN</h2>
+              <a href="#" className="buttonstyle">
+                Install Chrome Extension
+              </a>
             </div>
           </div>
           <div className="w-full md:px-8">
@@ -52,11 +52,21 @@ export default function About() {
           </div>
         </section>
         <section className="mb-24">
-          <h2 className="w-full text-center">Download for Chrome</h2>
+          <h2 className="w-full text-center mb-2">Install Chrome Extension</h2>
           <p className="max-w-96 text-center text-pretty mx-auto">
             Packrat is currently available as an extension for Chrome and
             Chromium-based browsers.
           </p>
+          <div className="w-full flex justify-center">
+            <div className="flex flex-col gap-4 justify-center items-center">
+              <a href="#" className="buttonstyle">
+                Download on Chrome Webstore
+              </a>
+              <a href="https://github.com/operating-function/packrat">
+                Download Source Code on Github
+              </a>
+            </div>
+          </div>
         </section>
         <section className="mb-24">
           <h2>FAQ</h2>
