@@ -176,6 +176,11 @@ export default function About() {
                   </tr>
                 </tbody>
               </table>
+              <p>
+                This information helps us understand if you're finding the
+                features we've developed valuable! We self-host our analytics
+                and we will not sell or reveal this data to third parties.
+              </p>
             </div>
           </details>
         </section>
