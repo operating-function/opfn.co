@@ -36,7 +36,7 @@ export default function About() {
         <section className="mb-24 content-zone px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-24">
             <div>
-              <h2>Save your own copy of the web</h2>
+              <h2 className="mb-4 font-bold">Save your own copy of the web</h2>
               <p>
                 Packrat archives every webpage you visit locally to your
                 computer.
@@ -47,7 +47,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-black w-full h-52"></div>
             <div>
-              <h2>Share pages with one click</h2>
+              <h2 className="mb-4 font-bold">Share pages with one click</h2>
               <p>Send specific archived pages directly to friends.</p>
               <p>
                 All data is sent directly with a peer-to-peer transfer, OPFN
@@ -57,7 +57,7 @@ export default function About() {
           </div>
         </section>
         <section className="mb-24 content-zone px-4">
-          <h2 className="w-full text-center mb-2">Install Chrome Extension</h2>
+          <h2 className="w-full text-center mb-4 font-bold">Get Packrat!</h2>
           <p className="max-w-96 text-center text-pretty mx-auto">
             Packrat is currently available as an extension for Chrome and
             Chromium-based browsers.
@@ -65,7 +65,7 @@ export default function About() {
           <div className="w-full flex justify-center">
             <div className="flex flex-col gap-4 justify-center items-center">
               <a href="#" className="buttonstyle">
-                Download on Chrome Webstore
+                Install Chrome Extension
               </a>
               <a href="https://github.com/operating-function/packrat">
                 Download Source Code on Github
@@ -74,7 +74,7 @@ export default function About() {
           </div>
         </section>
         <section className="mb-24 content-zone px-4">
-          <h2>FAQ</h2>
+          <h2 className="mb-4 font-bold">FAQ</h2>
           <details>
             <summary>What else can I do with my archives?</summary>
             <p>
@@ -197,36 +197,53 @@ export default function About() {
             <article className="max-w-[90ch] prose">
               <h2 className="mb-6">Why we built Packrat</h2>
               <p>
-                We believe that browser history is one of the most
-                un-iterated-upon features shipped in browsers today. In recent
-                years other companies have stepped in to help fill this
-                innovation void. Obsidian has released{" "}
-                <a href="https://obsidian.md/clipper" target="_blank">
-                  Web Clipper
-                </a>{" "}
-                which enables users to extract key text and information from
-                pages they visit as Markdown to save in their own notes.
-                Webrecorder maintains{" "}
-                <a href="https://webrecorder.net/archivewebpage">
-                  ArchiveWeb.page
-                </a>{" "}
-                which allows users to create focused, curated web archives of
-                content they care about. We think that both of these examples
-                are great tools, but they rely on the user making curatorial
-                decisions about what content they deem valuable. Other tools
-                like <a href="https://archivebox.io/">ArchiveBox</a> require
-                users to host a dedicated server to handle extraction and
-                preservation of content — a much more cohesive record of what
-                was browsed, but at the added cost that comes with running
-                infrastructure.
+                We believe that browser history and bookmarks are some of the
+                most un-iterated-upon features shipped in browsers today. In
+                recent years other companies have stepped in to help fill this
+                innovation void:
               </p>
+              <ul>
+                <li>
+                  <p>
+                    Obsidian has released{" "}
+                    <a href="https://obsidian.md/clipper" target="_blank">
+                      Web Clipper
+                    </a>{" "}
+                    which enables users to extract key text and information from
+                    pages they visit as Markdown to save in their own notes.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Webrecorder maintains{" "}
+                    <a href="https://webrecorder.net/archivewebpage">
+                      ArchiveWeb.page
+                    </a>{" "}
+                    which allows users to create focused, curated web archives
+                    of content they care about. ArchiveWeb.page is great, but
+                    like Web Clipper it's ui is focused on the user making
+                    active curatorial decisions about what content they deem
+                    valuable.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Other tools like{" "}
+                    <a href="https://archivebox.io/">ArchiveBox</a> require
+                    users to host a dedicated server to handle extraction and
+                    preservation of content — a much more cohesive record of
+                    what was browsed, but at the added cost that comes with
+                    running infrastructure.
+                  </p>
+                </li>
+              </ul>
+
               <p>
                 We think that there is opportunity for a middle ground between
                 these tools. Building upon Webrecorder's work enabling fully
                 browser-based capture and replay of web archives, Packrat seeks
                 to offer the same ease of use afforded by ArchiveWeb.page but
-                with a material-design compliant user interface focused less on
-                curation.{" "}
+                with a new user interface focused less on curation.{" "}
                 <a
                   href="https://developer.chrome.com/blog/extension-side-panel-launch"
                   target="_blank"
@@ -234,7 +251,8 @@ export default function About() {
                   Chrome's Side Panel API
                 </a>{" "}
                 (launched in 2022) allows us to showcase the user's archived
-                pages directly beside the current page enabling a seamless
+                pages directly beside the current page with the same Material 3
+                design language adopted by Chrome, enabling a seamless
                 transition between live web content and navigating archived
                 pages.
               </p>
@@ -264,10 +282,10 @@ export default function About() {
                 of libtorrent has shipped with it enabled by default. In
                 practice, most clients follow the defaults of libtorrent and
                 therefore don't support seeding to Webtorrent peers. While this
-                doesn't pose a direct problem for Packrat — our users' peers are
-                always other Packrat instances using Webtorrent — having this
-                enabled in libtorrent by default <em>would</em> enable other
-                interesting decentralized web archive hosting projects.
+                doesn't pose a direct problem for Packrat — our peers are always
+                other Packrat instances using Webtorrent — having this enabled
+                in libtorrent by default <em>would</em> enable other interesting
+                decentralized web archive hosting projects.
               </p>
               <hr />
               <p>
