@@ -30,29 +30,48 @@ export default function About() {
             </div>
           </div>
         </section>
-        <div className="content-zone mb-12 flex flex-row space-between items-center">
+        <div className="content-zone mb-24 mt-16 flex flex-row space-between items-center">
           <hr className="horizontal-bars" />
         </div>
         <section className="mb-24 content-zone px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-24">
-            <div>
-              <h2 className="mb-4 font-bold">Save your own copy of the web</h2>
-              <p>
-                Packrat archives every webpage you visit locally to your
-                computer.
-              </p>
+          <div className="flex flex-col md:flex-row gap-4 mb-24">
+            <div className="flex items-center w-full text-pretty">
+              <div>
+                <h2 className="mb-4 font-bold">
+                  Save your own copy of the web
+                </h2>
+                <p>
+                  Packrat archives every webpage you visit locally to your
+                  computer.
+                </p>
+                <p>Keep a web archive of everything you browse!</p>
+              </div>
             </div>
-            <div className="bg-black w-full h-52"></div>
+            <div className="w-full h-64">
+              <img
+                alt=""
+                src="/images/packrat/downloading.avif"
+                className="w-full h-auto max-h-full object-contain"
+              />
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="bg-black w-full h-52"></div>
-            <div>
-              <h2 className="mb-4 font-bold">Share pages with one click</h2>
-              <p>Send specific archived pages directly to friends.</p>
-              <p>
-                All data is sent directly with a peer-to-peer transfer, OPFN
-                never sees the content of your web archives.
-              </p>
+          <div className="flex flex-col flex-col-reverse md:flex-row gap-4 mb-12">
+            <div className="w-full h-64">
+              <img
+                alt=""
+                src="/images/packrat/sharing.avif"
+                className="w-full h-auto max-h-full object-contain"
+              />
+            </div>
+            <div className="flex items-center w-full text-pretty">
+              <div>
+                <h2 className="mb-4 font-bold">Share pages with one click</h2>
+                <p>Send specific archived pages directly to friends.</p>
+                <p>
+                  All data is sent directly with a peer-to-peer transfer, OPFN
+                  never sees the content of your web archives.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -75,29 +94,31 @@ export default function About() {
         </section>
         <section className="mb-24 content-zone px-4">
           <h2 className="mb-4 font-bold">FAQ</h2>
-          <details>
+          <details className="mb-2">
             <summary>What else can I do with my archives?</summary>
-            <p>
-              Lots! Packrat lets you export your archived pages as WACZ files
-              which are supported by various web archiving tools such as{" "}
-              <a href="https://webrecorder.net/browsertrix" target="_blank">
-                Browsertrix
-              </a>{" "}
-              and can be viewed or embedded in your own content using{" "}
-              <a href="https://webrecorder.net/replaywebpage" target="_blank">
-                ReplayWeb.page
-              </a>
-              .
-            </p>
-            <p>
-              WACZs are also just ZIP files. If you unzip them they'll reveal
-              their component WARCs (another web archiving format) that is
-              compatible with other tools.
-            </p>
+            <div className="mt-6 border-l-2 border-black pl-4 prose max-w-full">
+              <p>
+                Lots! Packrat lets you export your archived pages as WACZ files
+                which are supported by various web archiving tools such as{" "}
+                <a href="https://webrecorder.net/browsertrix" target="_blank">
+                  Browsertrix
+                </a>{" "}
+                and can be viewed or embedded in your own content using{" "}
+                <a href="https://webrecorder.net/replaywebpage" target="_blank">
+                  ReplayWeb.page
+                </a>
+                .
+              </p>
+              <p>
+                WACZs are also just ZIP files. If you unzip them they'll reveal
+                their component WARCs (another web archiving format) that is
+                compatible with other tools.
+              </p>
+            </div>
           </details>
-          <details>
+          <details className="mb-2">
             <summary>What analytics information do you collect?</summary>
-            <div className="prose max-w-none">
+            <div className="mt-6 border-l-2 border-black pl-4 prose max-w-full">
               <p>
                 If analytics are enabled we collect the following anonymized
                 data:
@@ -189,7 +210,7 @@ export default function About() {
             </div>
           </details>
         </section>
-        <div className="content-zone my-opfn flex flex-row space-between items-center">
+        <div className="content-zone mb-24 flex flex-row space-between items-center">
           <hr className="horizontal-bars" />
         </div>
         <section className="content-zone">
