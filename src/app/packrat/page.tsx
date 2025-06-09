@@ -3,32 +3,37 @@ import React from "react";
 export default function About() {
   return (
     <div>
-      <main className="content-zone mx-auto pt-24 px-4 mb-12">
-        <section className="mb-24 min-h-[70vh] flex gap-8 md:flex-row content-stretch flex-col">
-          <div className="w-full">
-            <div className="sticky top-24">
+      <main className="mx-auto mb-12">
+        <section className="md:max-h-[70vh] flex justify-center pt-24 px-4 pb-8">
+          <div className="flex gap-8 md:flex-row content-stretch flex-col max-w-4xl">
+            <div className="w-full">
+              <div className="sticky top-24 md:pt-40 flex flex-col items-center md:items-start">
+                <img
+                  alt="Packrat by OPFN"
+                  src="/images/packrat/packrat-lockup-color.svg"
+                  className="max-w-72 mb-2"
+                />
+                <h2 className="mb-6 font-bold text-pretty">
+                  Next-generation browser history
+                </h2>
+                <a href="#" className="buttonstyle">
+                  Install Chrome Extension
+                </a>
+              </div>
+            </div>
+            <div className="w-full md:px-8 flex justify-center">
               <img
-                alt="Packrat by OPFN"
-                src="/images/packrat/packrat-lockup-color.svg"
+                alt="Screenshot of the packrat extension showing a handful of pages archived. A large button reads: share current page"
+                src="/images/packrat/hero-screenshot.png"
+                className="rounded-2xl border-gray-300 border max-h-[512px] md:max-h-full relative"
               />
-              <h2 className="">Next-generation browser history from OPFN</h2>
-              <a href="#" className="buttonstyle">
-                Install Chrome Extension
-              </a>
             </div>
-          </div>
-          <div className="w-full md:px-8">
-            <div className="relative z-20 w-full h-full">
-              {/* Div for gradient overlay */}
-            </div>
-            <img
-              alt="Screenshot of the packrat extension showing a handful of pages archived. A large button reads: share current page"
-              src="/images/packrat/hero-screenshot.png"
-              className="rounded-2xl border-gray-300 border relative top-[-100%]"
-            />
           </div>
         </section>
-        <section className="mb-24">
+        <div className="content-zone mb-12 flex flex-row space-between items-center">
+          <hr className="horizontal-bars" />
+        </div>
+        <section className="mb-24 content-zone px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-24">
             <div>
               <h2>Save your own copy of the web</h2>
@@ -51,7 +56,7 @@ export default function About() {
             </div>
           </div>
         </section>
-        <section className="mb-24">
+        <section className="mb-24 content-zone px-4">
           <h2 className="w-full text-center mb-2">Install Chrome Extension</h2>
           <p className="max-w-96 text-center text-pretty mx-auto">
             Packrat is currently available as an extension for Chrome and
@@ -68,7 +73,7 @@ export default function About() {
             </div>
           </div>
         </section>
-        <section className="mb-24">
+        <section className="mb-24 content-zone px-4">
           <h2>FAQ</h2>
           <details>
             <summary>What else can I do with my archives?</summary>
@@ -187,7 +192,7 @@ export default function About() {
         <div className="content-zone my-opfn flex flex-row space-between items-center">
           <hr className="horizontal-bars" />
         </div>
-        <section>
+        <section className="content-zone">
           <div className="flex justify-center w-full">
             <article className="max-w-[90ch] prose">
               <h2 className="mb-6">Why we built Packrat</h2>
