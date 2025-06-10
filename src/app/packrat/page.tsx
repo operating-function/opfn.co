@@ -226,7 +226,7 @@ export default function About() {
               <a href="https://github.com/operating-function/packrat">
                 download the Packrat source code on Github
               </a>
-              .
+              . Packrat is developed under the AGPL-3.0 license.
             </p>
           </details>
         </section>
