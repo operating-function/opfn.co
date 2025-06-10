@@ -16,9 +16,9 @@ export default function About() {
                 <h2 className="mb-6 font-bold text-pretty">
                   Next-generation browser history
                 </h2>
-                <a href="#" className="buttonstyle">
+                {/* <a href="#" className="buttonstyle">
                   Install Chrome Extension
-                </a>
+                </a> */}
               </div>
             </div>
             <div className="w-full md:px-8 flex justify-center">
@@ -83,9 +83,10 @@ export default function About() {
           </p>
           <div className="w-full flex justify-center">
             <div className="flex flex-col gap-4 justify-center items-center">
-              <a href="#" className="buttonstyle">
+              {/* <a href="#" className="buttonstyle">
                 Install Chrome Extension
-              </a>
+              </a> */}
+              Coming soon!
             </div>
           </div>
         </section>
