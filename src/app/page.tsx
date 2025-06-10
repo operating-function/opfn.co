@@ -178,7 +178,7 @@ export default function Home() {
         </section>
 
         <div className="content-zone my-opfn flex flex-row space-between items-center">
-          <div className="horizontal-bars"></div>
+          <hr className="horizontal-bars" />
         </div>
 
         <section className="main-points flex flex-col items-center md:gap-x-[96px] content-zone">
@@ -246,7 +246,7 @@ export default function Home() {
         </section>
 
         <div className="content-zone my-opfn flex flex-row space-between items-center">
-          <div className="horizontal-bars"></div>
+          <hr className="horizontal-bars" />
         </div>
 
         <section id="core-technology">
@@ -506,7 +506,7 @@ type CogClosure =
         </section>
 
         <div className="content-zone mt-opfn mb-opfn-sm flex flex-row space-between items-center">
-          <div className="horizontal-bars"></div>
+          <hr className="horizontal-bars" />
         </div>
 
         <section id="system-overview">
@@ -781,7 +781,7 @@ Nats - natural numbers: opaque data or opcodes`}
           </section>
 
           <div className="content-zone my-opfn flex flex-row space-between items-center">
-            <div className="horizontal-bars"></div>
+            <hr className="horizontal-bars" />
           </div>
 
           <section id="use-cases">

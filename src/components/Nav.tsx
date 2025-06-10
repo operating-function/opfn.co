@@ -14,32 +14,33 @@ export default function Nav() {
   const [isScrolledDown, setIsScrolledDown] = useState(false);
   const [elementColor, setElementColor] = useState("white");
 
-    useEffect(() => {
-      if (!isHomePage) {
-        setIsScrolledDown(true);
-        setElementColor("black");
-        return;
-      }
+  useEffect(() => {
+    if (!isHomePage) {
+      setIsScrolledDown(true);
+      setElementColor("black");
+      return;
+    }
 
-      const timer = setTimeout(() => {
-        setIsVisible(true);
-      }, 250);
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 250);
 
-      const handleScroll = () => {
-        const navbarHeight = (document.getElementById("topNav") as HTMLElement)?.offsetHeight || 0;
-        const heroHeight = (document.querySelector(".top-hero") as HTMLElement)?.offsetHeight;
-        const scrolledPast = window.scrollY > heroHeight - (navbarHeight - 20);
-        setIsScrolledDown(scrolledPast);
-        scrolledPast ? setElementColor("black") : setElementColor("white");
-      };
+    const handleScroll = () => {
+      const navbarHeight =
+        (document.getElementById("topNav") as HTMLElement)?.offsetHeight || 0;
+      const heroHeight = (document.querySelector(".top-hero") as HTMLElement)
+        ?.offsetHeight;
+      const scrolledPast = window.scrollY > heroHeight - (navbarHeight - 20);
+      setIsScrolledDown(scrolledPast);
+      scrolledPast ? setElementColor("black") : setElementColor("white");
+    };
 
-      window.addEventListener("scroll", handleScroll);
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-        clearTimeout(timer);
-      };
-    }, [pathname, isHomePage]);
-
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(timer);
+    };
+  }, [pathname, isHomePage]);
 
   return (
     <div
@@ -49,10 +50,12 @@ export default function Nav() {
         before:absolute before:inset-0 before:transition-all before:ease-in-out
         before:-z-10
         transition-opacity duration-500 ease-in-out
-        ${!isVisible ? 'opacity-0' : 'opacity-100'}
-        ${isScrolledDown 
-          ? "before:translate-y-0 before:bg-[#EEE] before:shadow-md" 
-          : "before:-translate-y-full before:bg-transparent"}
+        ${!isVisible ? "opacity-0" : "opacity-100"}
+        ${
+          isScrolledDown
+            ? "before:translate-y-0 before:bg-[#EEE] before:shadow-md"
+            : "before:-translate-y-full before:bg-transparent"
+        }
       `}
     >
       <div className="flex container mx-auto max-w-opfn lg:px-2 items-center justify-between">
@@ -69,8 +72,15 @@ export default function Nav() {
           <Logo size={30} color="black" />
         </Link>
         <Hamburger color={elementColor}>
-          <nav id="site-nav" className="space-y-4">
-            <div className="text-right pr-3 pt-3">
+          <nav id="site-nav" className="p-4">
+            <div className="flex justify-between items-center mb-4">
+              <Link
+                href="/"
+                aria-label="home"
+                className="block text-lg hover:text-gray-600 text-center"
+              >
+                <Logo size={50} color="black" className="" />
+              </Link>
               <Link href="">
                 <button
                   className="relative w-[32px] h-[32px] bg-[#EEE]"
@@ -85,37 +95,32 @@ export default function Nav() {
                 </button>
               </Link>
             </div>
-            <Link
-              href="/"
-              className="block text-lg hover:text-gray-600 text-center"
+            <div className="flex flex-col gap-1 mb-6">
+              <Link href="/" className="block text-lg hover:text-gray-600">
+                Home
+              </Link>
+              <Link href="/about" className="block text-lg hover:text-gray-600">
+                About
+              </Link>
+              <Link
+                href="/careers"
+                className="block text-lg hover:text-gray-600"
+              >
+                Careers
+              </Link>
+            </div>
+
+            <h2 className="border-b-4 border-black border-double mb-2">
+              Experiments
+            </h2>
+            {/* <Link
+              href="/pallas"
+              className="block text-lg hover:text-gray-600"
             >
-              <Logo size={50} color="black" className="mx-auto" />
-            </Link>
-            <ExternalLink
-              href="https://github.com/operating-function/pallas/issues?q=is%3Aissue+is%3Aopen+label%3Acontributor_challenge"
-              divClass="text-lg hover:text-gray-600 justify-center flex"
-              linkClass="justify-center text-center"
-            >
-              Contribute
-            </ExternalLink>
-            <ExternalLink
-              href="https://github.com/operating-function/pallas"
-              divClass="text-lg hover:text-gray-600 justify-center flex"
-              linkClass="justify-center text-center"
-            >
-              Code
-            </ExternalLink>
-            <Link
-              href="/about"
-              className="block text-lg hover:text-gray-600 text-center"
-            >
-              About
-            </Link>
-            <Link
-              href="/careers"
-              className="block text-lg hover:text-gray-600 text-center"
-            >
-              Careers
+              Pallas — Software defined computing
+            </Link> */}
+            <Link href="/packrat" className="block text-lg hover:text-gray-600">
+              Packrat — Next-generation browser history
             </Link>
           </nav>
         </Hamburger>
