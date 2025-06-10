@@ -86,9 +86,6 @@ export default function About() {
               <a href="#" className="buttonstyle">
                 Install Chrome Extension
               </a>
-              <a href="https://github.com/operating-function/packrat">
-                Download Source Code on Github
-              </a>
             </div>
           </div>
         </section>
@@ -111,14 +108,27 @@ export default function About() {
               </p>
               <p>
                 WACZs are also just ZIP files. If you unzip them they'll reveal
-                their component WARCs (another web archiving format) that is
-                compatible with other tools.
+                their component{" "}
+                <a
+                  href="https://en.wikipedia.org/wiki/WARC_(file_format)"
+                  target="_blank"
+                >
+                  WARC files
+                </a>{" "}
+                (another web archiving format) that is compatible with other
+                tools.
               </p>
             </div>
           </details>
           <details className="mb-2">
-            <summary>What analytics information do you collect?</summary>
-            <div className="mt-6 border-l-2 border-black pl-4 prose max-w-full">
+            <summary>
+              What analytics information do you collect? How do you use this
+              data?
+            </summary>
+            <div
+              className="mt-6 border-l-2 border-black pl-4 prose max-w-full"
+              id="privacy-policy"
+            >
               <p>
                 If analytics are enabled we collect the following anonymized
                 data:
@@ -208,6 +218,16 @@ export default function About() {
                 and we will not sell or reveal this data to third parties.
               </p>
             </div>
+          </details>
+          <details className="mb-2">
+            <summary>Is Packrat open source?</summary>
+            <p className="mt-6 border-l-2 border-black pl-4 prose max-w-full">
+              Yes it is!{" "}
+              <a href="https://github.com/operating-function/packrat">
+                download the Packrat source code on Github
+              </a>
+              .
+            </p>
           </details>
         </section>
         <div className="content-zone mb-24 flex flex-row space-between items-center">
